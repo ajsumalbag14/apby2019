@@ -1,0 +1,4 @@
+#EBECBA - white
+#C03018 - Red
+#EC9747 - orange
+#606048 - grey
