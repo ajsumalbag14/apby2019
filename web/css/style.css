@@ -256,7 +256,7 @@ a:active {
     color: #EBECBA;
     font-size: 80px;
     padding-bottom: 19px;
-    margin-top: 15px;
+    margin-top: 30px;
     line-height: 4.8rem; 
   }
   .hero-area h2 {
@@ -472,3 +472,7 @@ footer {
       footer p a:hover {
         color: #EBECBA;
         text-decoration: none; }
+
+  footer img {
+    width: 20%;
+  }
