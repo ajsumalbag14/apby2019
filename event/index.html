@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>REGISTRATION - APBY CONFERENCE 2019</title>
+        <meta name="description" content="APBY CONFERENCE 2019 | Philippines">
+        <meta name="author" content="idiscipleph web master">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+        <!-- Fonts -->
+        <!-- Source Sans Pro -->
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400i|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <!-- CSS -->
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+        <!--
+        <link rel="stylesheet" href="css/themefisher-fonts.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/animate.css">
+        -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Responsive Stylesheet -->
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+
+    <body id="body">
+    
+        <div id="app">
+
+    	<div id="preloader">
+    		<div class="book">
+    		  <div class="book__page"></div>
+    		  <div class="book__page"></div>
+    		  <div class="book__page"></div>
+    		</div>
+    	</div>
+
+	    <section class="registration">
+	            <div class="row">
+	                <div class="col-md-6 p-4">
+                            <div class="text-center p-3">
+                                <img class="card-img-top" src="assets/img/your-logo.jpg" alt="logo">
+                                <div class="card-body">
+                                  <h1 class="card-title">Card title</h1>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+	                </div>
+	                <div class="col-md-6 bg-gray">
+	                    <div class="block px-3">
+                            <form class="form-signin" v-on:submit.prevent="onSubmit">
+                                <div class="text-center mb-4">
+                                  <h1 class="h3 mb-3 font-weight-normal">{{ title }}</h1>
+                                  <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
+                                </div>
+                          
+                                <div class="form-label-group">
+                                    <label for="inputAffiliation">Affiliation</label>
+                                    <input v-model="profile.affiliation" type="text" id="inputAffiliation" class="form-control" placeholder="Affiliation" required>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <label for="inputFirstName">First Name</label>
+                                    <input v-model="profile.firstname" type="text" id="inputFirstName" class="form-control" placeholder="First Name" required>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <label for="inputLastName">Last Name</label>
+                                    <input v-model="profile.lastname" type="text" id="inputLastName" class="form-control" placeholder="Last Name" required>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <label for="inputEmail">Email Address</label>
+                                    <input v-model="profile.email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <label for="inputMobile">Mobile Number</label>
+                                    <input v-model="profile.mobile" type="text" id="inputMobile" maxlength="11" class="form-control" placeholder="Mobile Number" required autofocus>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <label for="inputGender">Gender</label>
+                                    <select v-model="profile.gender" name="inputGender" id="inputGender" class="form-control" required>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <label for="inputBirthdate">Birth Date</label>
+                                    <input v-model="profile.birthdate" type="date" id="inputBirthdate" class="form-control" required autofocus>
+                                </div>
+
+                                <hr>
+                                <p class="small">Check your details and then submit to proceed on billing.</p>
+                                <br>
+                                <button class="btn btn-lg btn-warning btn-block" type="submit">Submit</button>
+                            </form>
+	                    </div>
+	                </div>
+	            </div><!-- .row close -->
+	    </section><!-- header close -->
+
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block">
+                            <img src="assets/img/ASIA-PACIFIC-LOGO.png" class="img" alt="">
+                            <img src="assets/img/LCSBC Logo.png" class="img" alt="">
+                            <img src="assets/img/IDISCIPLE LOGO.png" class="img" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
+        <!-- Js -->
+        <script src="js/vendor/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/jquery.form.js"></script>
+        <script src="js/jquery.nav.js"></script>
+        <script src="js/wow.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script> -->
+        <script src="js/main.js"></script>
+
+        <!-- Vuejs -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+        <script src="js/vue/main.vue.js"></script>
+        
+    </body>
+</html>
