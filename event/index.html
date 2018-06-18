@@ -33,7 +33,7 @@
 
     <body id="body">
     
-        <div id="app">
+    <div id="app">
 
     	<div id="preloader">
     		<div class="book">
@@ -44,78 +44,90 @@
     	</div>
 
 	    <section class="registration">
+            <div class="container">
 	            <div class="row">
-	                <div class="col-md-6 p-4">
+	                <div class="col col-lg-7">
                             <div class="text-center p-3">
                                 <img class="card-img-top" src="assets/img/your-logo.jpg" alt="logo">
                                 <div class="card-body">
-                                  <h1 class="card-title">Card title</h1>
+                                  <h1 class="card-title">Event Title</h1>
                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
                             </div>
 	                </div>
-	                <div class="col-md-6 bg-gray">
+	                <div class="col col-lg-5">
 	                    <div class="block px-3">
-                            <form class="form-signin" v-on:submit.prevent="onSubmit">
-                                <div class="text-center mb-4">
-                                  <h1 class="h3 mb-3 font-weight-normal">{{ title }}</h1>
-                                  <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
+                            <form class="form-signin bg-gray" v-on:submit.prevent="onSubmit">
+                                <div class="text-center">
+                                    <h1 class="h3 mb-3 font-weight-normal">Registration Form</h1>
                                 </div>
                           
                                 <div class="form-label-group">
-                                    <label for="inputAffiliation">Affiliation</label>
-                                    <input v-model="profile.affiliation" type="text" id="inputAffiliation" class="form-control" placeholder="Affiliation" required>
-                                </div>
-
-                                <div class="form-label-group">
                                     <label for="inputFirstName">First Name</label>
-                                    <input v-model="profile.firstname" type="text" id="inputFirstName" class="form-control" placeholder="First Name" required>
+                                    <input v-model="profile.firstname" type="text" maxlength="50" id="inputFirstName" class="form-control" required>
                                 </div>
 
                                 <div class="form-label-group">
                                     <label for="inputLastName">Last Name</label>
-                                    <input v-model="profile.lastname" type="text" id="inputLastName" class="form-control" placeholder="Last Name" required>
+                                    <input v-model="profile.lastname" type="text" maxlength="50" id="inputLastName" class="form-control" required>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <label for="inputMiddleName">Middle Name</label>
+                                    <input v-model="profile.middlename" type="text" maxlength="50" id="inputMiddleName" class="form-control" required>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <label for="inputNickName">Nickname</label>
+                                    <input v-model="profile.nickname" type="text" maxlength="20" id="inputNickName" class="form-control" required>
                                 </div>
 
                                 <div class="form-label-group">
                                     <label for="inputEmail">Email Address</label>
-                                    <input v-model="profile.email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                    <input v-model="profile.email" type="email" id="inputEmail" class="form-control" required autofocus>
                                 </div>
 
                                 <div class="form-label-group">
                                     <label for="inputMobile">Mobile Number</label>
-                                    <input v-model="profile.mobile" type="text" id="inputMobile" maxlength="11" class="form-control" placeholder="Mobile Number" required autofocus>
+                                    <input v-model="profile.mobile" type="text" id="inputMobile" maxlength="11" class="form-control" required autofocus>
                                 </div>
 
                                 <div class="form-label-group">
                                     <label for="inputGender">Gender</label>
                                     <select v-model="profile.gender" name="inputGender" id="inputGender" class="form-control" required>
+                                        <option value="">---</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                     </select>
                                 </div>
+                                <hr>
+                                <div class="form-label-group">
+                                    <label for="inputAffiliation">Church / Organization</label>
+                                    <input v-model="profile.affiliation" type="text" id="inputAffiliation" maxlength="100" class="form-control" required>
+                                </div>
 
                                 <div class="form-label-group">
-                                    <label for="inputBirthdate">Birth Date</label>
-                                    <input v-model="profile.birthdate" type="date" id="inputBirthdate" class="form-control" required autofocus>
+                                    <label for="inputRole">Role</label>
+                                    <input v-model="profile.role" type="text" id="inputRole" class="form-control" maxlength="20" autofocus>
                                 </div>
 
                                 <hr>
-                                <p class="small">Check your details and then submit to proceed on billing.</p>
+                                <p class="small">By clicking the submit button, I already reviewed the information I entered in the registration form.</p>
                                 <br>
                                 <button class="btn btn-lg btn-warning btn-block" type="submit">Submit</button>
                             </form>
 	                    </div>
 	                </div>
-	            </div><!-- .row close -->
+                </div><!-- .row close -->
+            </div>
 	    </section><!-- header close -->
 
-        </div>
+    </div>
 
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col col-md-12">
                         <div class="block">
                             <img src="assets/img/ASIA-PACIFIC-LOGO.png" class="img" alt="">
                             <img src="assets/img/LCSBC Logo.png" class="img" alt="">
@@ -141,6 +153,9 @@
         <!-- Vuejs -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
         <script src="js/vue/main.vue.js"></script>
+
+        <!-- AXIOS -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         
     </body>
 </html>

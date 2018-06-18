@@ -7,14 +7,14 @@ $(document).ready(function(){
 
      new WOW().init();
 
-
+    
      $('#top-nav').onePageNav({
         currentClass: 'current',
         changeHash: true,
         scrollSpeed: 1200
     });
 
-     
+     /*
     //animated header class
     $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
@@ -46,7 +46,7 @@ $(document).ready(function(){
         autoPlay : 5000,
         }
     );
-
+*/
     /*$('input, textarea').data('holder', $('input, textarea').attr('placeholder'));
 
     $('input, textarea').focusin(function () {
@@ -56,7 +56,7 @@ $(document).ready(function(){
         $(this).attr('placeholder', $(this).data('holder'));
     });*/
 
-
+/*
     //contact form validation
     $("#contact-form").validate({
         rules: {
@@ -106,8 +106,8 @@ $(document).ready(function(){
         }
     });
 
+*/
 });
-
 
 
 

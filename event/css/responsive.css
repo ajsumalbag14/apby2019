@@ -6,10 +6,14 @@
     
 }
 
-@media (min-width: 392px) and (max-width: 676px) {
+@media (max-width: 676px) {
 
   body {
-    background: #EC9747;
+    background:#fff;
+  }
+
+  .registration {
+    border: solid 1px red;
   }
 
   .hero-area {
@@ -75,6 +79,13 @@
             position: relative;
             overflow: hidden;
             height: 60px; }
+
+  .form-signin {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 2em;
+    border: solid 1px;
+  }
 
   footer img {
     width: 30% !important;
