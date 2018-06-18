@@ -4,7 +4,7 @@ namespace App\Modules\Registration\Profile\Models;
 
 use Illuminate\Database\Eloquent\Model;
  
-class RegSolo extends Model
+class RegPool extends Model
 {	
 
 	/**
@@ -17,13 +17,13 @@ class RegSolo extends Model
 	 * Define table name
 	 * @var string
 	 */
-	protected $table = 'reg_solo';
+	protected $table = 'reg_pool';
 
 	/**
 	 * Define primary key
 	 * @var string
 	 */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'reg_pool_id';
 
     /**
      * Disable automatic timestamp of table
@@ -36,8 +36,8 @@ class RegSolo extends Model
      * @var array
      */
 	protected $fillable = [
-		'affiliation', 'firstname', 'lastname', 'gender', 'email', 'mobile_no', 'birthdate',
-		'updated_at', 'created_at', 'civil_status', 'ticket_id', 'event_id', 'activity'
+		'affiliation', 'firstname', 'lastname', 'middlename', 'nickname', 'gender', 'email', 'mobile_no', 'role',
+		'updated_at', 'created_at', 'ticket_id', 'event_id', 'activity'
 	];
 
 }

@@ -21,13 +21,16 @@ class ResponseParser implements ResponseParserInterface
         if ($response['code'] == 201 && !empty($response['data'])) {
     
             $data = [
-                'id'            => $response['data']['id'],
+                'uuid'          => $response['data']['reg_pool_uuid'],
                 'firstname'     => $response['data']['firstname'],
                 'lastname'      => $response['data']['lastname'],
+                'middlename'    => $response['data']['middlename'],
+                'nickname'      => $response['data']['nickname'],
                 'gender'        => $response['data']['gender'],
                 'email'         => $response['data']['email'],
-                'birthdate'     => $response['data']['birthdate'],
-                'created_at'    => $response['data']['created_at']
+                'organization'  => $response['data']['affiliation'],
+                'role'          => $response['data']['role'],
+                'created'       => $response['data']['created_at']
             ];
 
             $response['data'] = $data;

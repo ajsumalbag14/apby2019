@@ -39,16 +39,29 @@ class ProfileController extends Controller
         $this->_log->class = __CLASS__;
     }
 
-    public function insertRecords(Request $request)
+    public function insertSingleRecord(Request $request)
     {
         //log activity
         $this->_log->info(__FUNCTION__, "Form parameters", $request->all());
         
         //Validate and Parse request
         $parsedRequest = $this->_requestParser->regInsertRequest($request);
+        $this->_log->info(__FUNCTION__, "Parsed request parameters", [$parsedRequest]);
+        if ($parsedRequest['code'] != 200) {
+            return $this->_status->httpResponse($parsedRequest);
+        }
+        
+        //check duplicate email address
+        $dups = $this->_service->checkDupsEmail($parsedRequest['data']);
+        if ($dups['code'] != 200) {
+            return $this->_status->httpResponse($dups);
+        } elseif ($dups['status'] == 'PR002') {
+            $this->_log->info(__FUNCTION__, "error return", [$dups]);
+            return $this->_status->httpResponse($dups);
+        }
 
         //Insert/update user record
-        $reg_user = $this->_service->insertProfileService($parsedRequest);
+        $reg_user = $this->_service->insertProfileService($parsedRequest['data']);
 
         $this->_log->info(__FUNCTION__, "response parameters", [$reg_user]);
         //parse response

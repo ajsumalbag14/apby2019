@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRegSoloTable extends Migration
+class CreateRegPoolTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,21 @@ class CreateRegSoloTable extends Migration
      */
     public function up()
     {
-        Schema::create('reg_solo', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('reg_pool', function (Blueprint $table) {
+            $table->increments('reg_pool_id');
+            $table->string('reg_pool_uuid');
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('gender');
-            $table->string('civil_status');
-            $table->date('birthdate');
-            $table->string('email')->unique();
+            $table->string('middlename');
+            $table->string('nickname');
+            $table->string('gender')->nullable();
+            $table->string('email');
             $table->string('mobile_no');
-            $table->string('affiliation');
+            $table->string('affiliation', 100);
+            $table->string('role')->nullable();
+            $table->string('token', 100)->nullable();
             $table->integer('ticket_id');
-            $table->string('activity');
+            $table->string('activity', 255);
             $table->integer('event_id');
             $table->timestamps();
         });
@@ -37,6 +40,6 @@ class CreateRegSoloTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reg_solo');
+        Schema::dropIfExists('reg_pool');
     }
 }

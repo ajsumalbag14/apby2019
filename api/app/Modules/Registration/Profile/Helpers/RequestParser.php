@@ -13,14 +13,15 @@ class RequestParser implements RequestParserInterface
     {
         $validator = Validator::make($request->all(), 
             [
-                'affiliation'	=> 'string',
                 'firstname' 	=> 'required|string',
                 'lastname'		=> 'required|string',
+                'middlename'    => 'required|string',
+                'nickname'		=> 'required|string',
                 'gender'		=> 'string',
                 'email'			=> 'required|email',
-                'mobile'		=> 'string',
-                'birthdate'		=> 'date',
-                'mode'          => 'required|string'
+                'mobile'		=> 'required|string',
+                'org'   		=> 'required|string',
+                'role'  		=> 'string'
             ]
         );
 
@@ -32,21 +33,22 @@ class RequestParser implements RequestParserInterface
             ];
         } else {
 
-            $tmp = strtotime($request->birthdate);
-            $bdate = date('Y-m-d', $tmp);
-
             $response = [
-                'affiliation'   => $request->affiliation ? $request->affiliation : '------',
-                'firstname'     => $request->firstname ? $request->firstname : null,
-                'lastname'      => $request->lastname ? $request->lastname : null,
-                'gender'        => $request->gender ? $request->gender : null,
-                'email'         => $request->email ? $request->email : null,
-                'mobile_no'     => $request->mobile,
-                'birthdate'     => $request->birthdate ? $bdate : null,
-                'mode'          => $request->mode ? $request->mode : 'solo',
-                'civil_status'  => 'NULL',
-                'ticket_id'     => 1,
-                'event_id'      => 1
+                'code'  => 200,
+                'data'  => [
+                    'firstname'     => $request->firstname ? $request->firstname : 'firstname',
+                    'lastname'      => $request->lastname ? $request->lastname : 'lastname',
+                    'middlename'    => $request->middlename ? $request->middlename : 'middlename',
+                    'nickname'      => $request->nickname ? $request->nickname : 'nickname',
+                    'gender'        => $request->gender ? $request->gender : 'gender',
+                    'email'         => $request->email ? $request->email : 'email@email.com',
+                    'mobile_no'     => $request->mobile ? $request->mobile : '0123456789',
+                    'affiliation'   => $request->org ? $request->org : 'affiliation',
+                    'role'          => $request->role ? $request->role : 'role',
+                    'ticket_id'     => 1,
+                    'activity'      => 'workshop 1',
+                    'event_id'      => 1
+                ]
             ];
         }
 

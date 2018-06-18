@@ -28,11 +28,11 @@ class ProfileService implements ProfileServiceInterface
 
     public function insertProfileService($request)
     {
-        $update = [
-            'created_at'    => Carbon::now()
+        $date = [
+            'created_at' => Carbon::now()
         ];
 
-        $params = array_merge($request, $update);
+        $params = array_merge($request, $date);
 
         $this->_log->info(__FUNCTION__, 'send to insert profile', [$params]);
         $user_profile = $this->_repo->insertProfile($params);
@@ -45,6 +45,28 @@ class ProfileService implements ProfileServiceInterface
                 'status'    => 'PR001',
                 'message'   => 'Success',
                 'data'      => $user_profile['data']
+            ];
+        } else {
+            $response = $user_profile;
+        }
+        
+
+        return $response;
+
+    }
+
+    public function checkDupsEmail($request)
+    {
+        $email = $request['email'];
+        $this->_log->info(__FUNCTION__, 'check email', [$email]);
+        $user_profile = $this->_repo->getProfile($email);
+        
+        if ($user_profile['status'] == 'PR001') {
+            $this->_log->info(__FUNCTION__, 'selected resource', [$user_profile]);
+            $response = [
+                'code'      => 200,
+                'status'    => 'PR002',
+                'message'   => 'Email already exists.'
             ];
         } else {
             $response = $user_profile;
