@@ -269,6 +269,18 @@ a:active {
   justify-content: center;
   align-items: center; 
 }
+
+.reg-area {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.reg-area-separator {
+  margin-top: 2em;
+}
+
 /* .hero-area  */
 .navigation {
   background-color: transparent;
@@ -336,17 +348,29 @@ a:active {
   .btn {
     border-radius: 0; }
   
-  .btn-home {
-    background-color: #C03018;
-    border-radius: 0px;
-    color: #EBECBA;
-    font-size: 22px;
-    padding: 10px 40px;
-  }
-    .btn-home:hover, .btn-home:focus {
-      background-color: #EBECBA;
-      color: #606048;
-      border: 1px solid #EBECBA; }
+.btn-home-red {
+  background-color: #C03018;
+  border-radius: 0px;
+  color: #EBECBA;
+  font-size: 22px;
+  padding: 10px 40px;
+}
+  .btn-home-red:hover, .btn-home-red:focus {
+    background-color: #EBECBA;
+    color: #272727;
+    border: 1px solid #EBECBA; }
+
+.btn-home-orange {
+  background-color: #EC9747;
+  border-radius: 0px;
+  color: #272727;
+  font-size: 22px;
+  padding: 10px 40px;
+}
+  .btn-home-orange:hover, .btn-home-orange:focus {
+    background-color: #EBECBA;
+    color: #272727;
+    border: 1px solid #EBECBA; }
 
 footer {
   font-family: 'Gotham Medium';

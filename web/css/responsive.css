@@ -78,6 +78,61 @@
     width: 100%;
   }
 
+  .reg-area {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .reg-area-separator {
+    margin-top: 1em;
+  }
+
+  .reg-area h1 {
+    color: #EBECBA;
+    font-size: 22px;
+    line-height: 3rem; 
+  }
+  .reg-area h2 {
+    color: #EBECBA;
+    font-size: 18px;
+    font-family: 'Gotham Bold';
+  }
+  .reg-area h3 {
+    color: #EBECBA;
+    font-size: 16px;
+    font-family: 'Gotham Bold';
+  }
+  .reg-area h4 {
+    color: #EC9747;
+    font-size: 14px;
+  }
+
+  .btn-home-red {
+    background-color: #C03018;
+    border-radius: 0px;
+    color: #EBECBA;
+    font-size: 14px;
+    padding: 10px 40px;
+  }
+    .btn-home-red:hover, .btn-home-red:focus {
+      background-color: #EBECBA;
+      color: #272727;
+      border: 1px solid #EBECBA; }
+  
+  .btn-home-orange {
+    background-color: #EC9747;
+    border-radius: 0px;
+    color: #272727;
+    font-size: 14px;
+    padding: 10px 40px;
+  }
+    .btn-home-orange:hover, .btn-home-orange:focus {
+      background-color: #EBECBA;
+      color: #272727;
+      border: 1px solid #EBECBA; }
+
   .navigation {
     padding: 30px 50px;
     margin: 0;
