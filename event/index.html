@@ -46,22 +46,63 @@
 	    <section class="registration">
             <div class="container">
 	            <div class="row">
-	                <div class="col col-lg-7">
-                            <div class="text-center p-3">
-                                <img class="card-img-top" src="assets/img/your-logo.jpg" alt="logo">
-                                <div class="card-body">
-                                  <h1 class="card-title">Event Title</h1>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-	                </div>
+	                
 	                <div class="col col-lg-5">
 	                    <div class="block px-3">
                             <form class="form-signin bg-gray" v-on:submit.prevent="onSubmit">
                                 <div class="text-center">
-                                    <h1 class="h3 mb-3 font-weight-normal">Registration Form</h1>
+                                    <h1 class="h3 font-weight-normal">STEP 1/2: <br> <span class="small">Reg Details</span></h1>
                                 </div>
                           
+                                <div class="form-label-group">
+                                    <label for="inputCountry">Country</label>
+                                    <select v-model="profile.country" name="inputCountry" id="inputCountry" class="form-control" required>
+                                            <option value="AUS">Australia</option>
+                                            <option value="BGD">Bangladesh</option>
+                                            <option value="BTN">Bhutan</option>
+                                            <option value="BRN">Brunei</option>
+                                            <option value="KHM">Cambodia</option>
+                                            <option value="CHN">China</option>
+                                            <option value="COK">Cook Islands</option>
+                                            <option value="FJI">Fiji</option>
+                                            <option value="PYF">French Polynesia</option>
+                                            <option value="HKG">Hong Kong</option>
+                                            <option value="IND">India</option>
+                                            <option value="IDN">Indonesia</option>
+                                            <option value="JPN">Japan</option>
+                                            <option value="KIR">Kiribati</option>
+                                            <option value="LBN">Lebanon</option>
+                                            <option value="MAC">Macao</option>
+                                            <option value="MYS">Malaysia</option>
+                                            <option value="MDV">Maldives</option>
+                                            <option value="MHL">Marshall Islands</option>
+                                            <option value="FSM">Micronesia</option>
+                                            <option value="MNG">Mongolia</option>
+                                            <option value="MMR">Myanmar</option>
+                                            <option value="NRU">Nauru</option>
+                                            <option value="NPL">Nepal</option>
+                                            <option value="NZL">New Zealand</option>
+                                            <option value="PLW">Palau</option>
+                                            <option value="PNG">Papua New Guinea</option>
+                                            <option value="PER">Peru</option>
+                                            <option value="PHL">Philippines</option>
+                                            <option value="RUS">Russia</option>
+                                            <option value="WSM">Samoa</option>
+                                            <option value="SGP">Singapore</option>
+                                            <option value="SLB">Solomon Islands</option>
+                                            <option value="KOR">South Korea</option>
+                                            <option value="LKA">Sri Lanka</option>
+                                            <option value="TWN">Taiwan</option>
+                                            <option value="THA">Thailand</option>
+                                            <option value="TLS">Timor-Leste</option>
+                                            <option value="TON">Tonga</option>
+                                            <option value="TUV">Tuvalu</option>
+                                            <option value="VUT">Vanuatu</option>
+                                            <option value="VNM">Vietnam</option>
+                                            <option value="USA">United States</option>
+                                    </select>
+                                </div>
+
                                 <div class="form-label-group">
                                     <label for="inputFirstName">First Name</label>
                                     <input v-model="profile.firstname" type="text" maxlength="50" id="inputFirstName" class="form-control" required>
@@ -114,10 +155,24 @@
                                 <hr>
                                 <p class="small">By clicking the submit button, I already reviewed the information I entered in the registration form.</p>
                                 <br>
+
+                                <h3 v-if="alert_error" class="alert alert-danger text-xs">{{ err_msg }}</h3>
+                                <h3 v-if="alert_success" class="alert alert-success text-xs">{{ suc_msg }}</h3>
+
                                 <button class="btn btn-lg btn-warning btn-block" type="submit">Submit</button>
                             </form>
 	                    </div>
-	                </div>
+                    </div>
+                    
+                    <div class="col col-lg-7">
+                        <div class="text-center p-3">
+                            <img class="card-img-top" src="assets/img/your-logo.jpg" alt="logo">
+                            <div class="card-body">
+                              <h1 class="card-title">Event Title</h1>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                </div>
                 </div><!-- .row close -->
             </div>
 	    </section><!-- header close -->

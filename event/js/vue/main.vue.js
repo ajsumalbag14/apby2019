@@ -4,6 +4,7 @@ var app = new Vue({
         return {
             title: 'Hello Vue!',
             profile: {
+                country: '',
                 firstname : '',
                 lastname : '',
                 middlename : '',
@@ -13,7 +14,11 @@ var app = new Vue({
                 email : '',
                 affiliation : '',
                 role : ''
-            }
+            },
+            alert_error: false,
+            err_msg: '',
+            alert_success: false,
+            suc_msg: ''
       }
     },
     methods: {
@@ -21,6 +26,7 @@ var app = new Vue({
             let d = this
             axios.post('http://localhost/apby2019/api/public/reg/profile/new', 
             {                
+                country: d.profile.country,
                 firstname: d.profile.firstname,
                 lastname: d.profile.lastname,
                 middlename: d.profile.middlename,
@@ -34,16 +40,27 @@ var app = new Vue({
             .then(response => {
                 //response;
                 let resp = response.data
-                if (JSON.stringify(resp.code) == 200) {
-                    if (JSON.stringify(resp.status) == 'PR002')
-                    console.log( "Error: " + JSON.stringify(resp.message, '"'));
+                if (JSON.stringify(resp.code) == 200 || JSON.stringify(resp.code) == 201) {
+                    if (JSON.stringify(resp.status) == 'PR001') {
+                        d.alert_success = false
+                        d.alert_error = true
+                        d.err_msg = JSON.stringify(resp.message)
+                    }
                     else
-                    console.log(JSON.stringify(resp.message));
+                    {
+                        d.alert_error = false
+                        d.alert_success = true
+                        d.suc_msg = JSON.stringify(resp.message)
+                        //clear
+                        d.unsetVariables()
+                    }
                 }
                 else 
-                console.log('Error: ' + JSON.stringify(resp.message))
-                //clear
-                d.unsetVariables()
+                {
+                    d.alert_success = false
+                    d.alert_error = true
+                    d.err_msg = JSON.stringify(resp.message)
+                }
 
             })
             .catch(error => {
@@ -51,6 +68,7 @@ var app = new Vue({
             });
         },
         unsetVariables: function() {
+            $('#inputCountry').val('')
             $('#inputFirstName').val('')
             $('#inputLastName').val('')
             $('#inputMiddleName').val('')

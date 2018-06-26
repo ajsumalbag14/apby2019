@@ -1,0 +1,11 @@
+<option value="AUS">Australia</option>
+                                        <option value="CHN">China</option>
+                                        <option value="HKG">Hong Kong</option>
+                                        <option value="IND">India</option>
+                                        <option value="JPN">Japan</option>
+                                        <option value="KOR">South Korea</option>
+                                        <option value="NZL">New Zealand</option>
+                                        <option value="RUS">Russia</option>
+                                        <option value="SGP">Singapore</option>
+                                        <option value="TWN">Taiwan</option>
+                                        <option value="USA">United States</option>
