@@ -55,7 +55,7 @@ class ProfileController extends Controller
         $dups = $this->_service->checkDupsEmail($parsedRequest['data']);
         if ($dups['code'] != 200) {
             return $this->_status->httpResponse($dups);
-        } elseif ($dups['status'] == 'PR002') {
+        } elseif ($dups['status'] == 'PR001') {
             $this->_log->info(__FUNCTION__, "error return", [$dups]);
             return $this->_status->httpResponse($dups);
         }

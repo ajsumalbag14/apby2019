@@ -13,6 +13,7 @@ class RequestParser implements RequestParserInterface
     {
         $validator = Validator::make($request->all(), 
             [
+                'country' 	    => 'required|string',
                 'firstname' 	=> 'required|string',
                 'lastname'		=> 'required|string',
                 'middlename'    => 'required|string',
@@ -36,6 +37,7 @@ class RequestParser implements RequestParserInterface
             $response = [
                 'code'  => 200,
                 'data'  => [
+                    'country_alt'   => $request->country,
                     'firstname'     => $request->firstname ? $request->firstname : 'firstname',
                     'lastname'      => $request->lastname ? $request->lastname : 'lastname',
                     'middlename'    => $request->middlename ? $request->middlename : 'middlename',

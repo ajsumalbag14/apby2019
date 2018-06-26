@@ -28,7 +28,17 @@ class ProfileService implements ProfileServiceInterface
 
     public function insertProfileService($request)
     {
+        //get country
+        $ct = config('constants.asia_pacific');
+        foreach ($ct as $key => $val) {
+            if ($key == $request['country_alt']) {
+                $country = $val;
+                break;
+            }
+        }
+
         $date = [
+            'country'    => $country,       
             'created_at' => Carbon::now()
         ];
 
@@ -42,7 +52,7 @@ class ProfileService implements ProfileServiceInterface
 
             $response = [
                 'code'      => 201,
-                'status'    => 'PR001',
+                'status'    => 'RP001',
                 'message'   => 'Success',
                 'data'      => $user_profile['data']
             ];
@@ -65,7 +75,7 @@ class ProfileService implements ProfileServiceInterface
             $this->_log->info(__FUNCTION__, 'selected resource', [$user_profile]);
             $response = [
                 'code'      => 200,
-                'status'    => 'PR002',
+                'status'    => 'PR001',
                 'message'   => 'Email already exists.'
             ];
         } else {

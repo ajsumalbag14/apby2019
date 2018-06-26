@@ -26,6 +26,8 @@ class CreateRegPoolTable extends Migration
             $table->string('affiliation', 100);
             $table->string('role')->nullable();
             $table->string('token', 100)->nullable();
+            $table->string('country')->nullable();
+            $table->string('country_alt')->nullable();
             $table->integer('ticket_id');
             $table->string('activity', 255);
             $table->integer('event_id');

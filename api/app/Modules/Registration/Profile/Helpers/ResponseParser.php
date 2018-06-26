@@ -30,6 +30,8 @@ class ResponseParser implements ResponseParserInterface
                 'email'         => $response['data']['email'],
                 'organization'  => $response['data']['affiliation'],
                 'role'          => $response['data']['role'],
+                'country'       => $response['data']['country'],
+                'country_alt'   => $response['data']['country_alt'],
                 'created'       => $response['data']['created_at']
             ];
 

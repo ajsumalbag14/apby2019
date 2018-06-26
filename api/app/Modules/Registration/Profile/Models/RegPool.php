@@ -37,7 +37,7 @@ class RegPool extends Model
      */
 	protected $fillable = [
 		'affiliation', 'firstname', 'lastname', 'middlename', 'nickname', 'gender', 'email', 'mobile_no', 'role',
-		'updated_at', 'created_at', 'ticket_id', 'event_id', 'activity'
+		'updated_at', 'created_at', 'ticket_id', 'event_id', 'activity','country','country_alt'
 	];
 
 }

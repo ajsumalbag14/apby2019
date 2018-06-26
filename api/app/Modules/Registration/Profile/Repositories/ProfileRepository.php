@@ -41,6 +41,8 @@ class ProfileRepository implements ProfileRepositoryInterface
             $resource->mobile_no = $params['mobile_no'];
             $resource->affiliation = $params['affiliation'];
             $resource->role  = $params['role'];
+            $resource->country = $params['country'];
+            $resource->country_alt = $params['country_alt'];
             $resource->activity = $params['activity'];
             $resource->ticket_id = $params['ticket_id'];
             $resource->event_id = $params['event_id'];
