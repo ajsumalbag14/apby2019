@@ -144,6 +144,11 @@ a:active {
   color: #606048;
 }
 
+.text-xs {
+  font-size: 12px;
+  font-family: "Gotham Medium";
+}
+
 .border-red {
   border-top: solid 5px #C03018;
 }
@@ -275,6 +280,13 @@ a:active {
   display: flex;
   justify-content: center;
   align-items: center; 
+}
+
+.reg-area p {
+  font-size: 12px;
+  font-family: "Gotham Medium";
+  max-width: 350px;
+  line-height: 14px;
 }
 
 .reg-area-separator {

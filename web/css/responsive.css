@@ -1,5 +1,8 @@
 /*Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
+  .text-xs {
+    font-size: 11px;
+  }
   .logo {
     width: 150px !important;
     margin-bottom: 0px;
@@ -85,6 +88,14 @@
     align-items: center; 
   }
 
+  .reg-area p {
+    font-size: 10px;
+    font-family: "Gotham Medium";
+    max-width: 250px;
+    line-height: 14px;
+  }
+  
+
   .reg-area-separator {
     margin-top: 1em;
   }
@@ -113,7 +124,7 @@
     background-color: #C03018;
     border-radius: 0px;
     color: #EBECBA;
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px 40px;
   }
     .btn-home-red:hover, .btn-home-red:focus {
@@ -125,7 +136,7 @@
     background-color: #EC9747;
     border-radius: 0px;
     color: #272727;
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px 40px;
   }
     .btn-home-orange:hover, .btn-home-orange:focus {
