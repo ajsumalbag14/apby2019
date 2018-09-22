@@ -276,7 +276,7 @@ a:active {
 }
 
 .reg-area {
-  height: 75vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -291,6 +291,87 @@ a:active {
 
 .reg-area-separator {
   margin-top: 2em;
+}
+
+.speakers-area {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.speakers-area h2 {
+  margin-top: 1em; 
+  color: #EC9747;
+  font-size: 25px;
+  font-family: 'Gotham Black';
+  margin-bottom: .8em;
+}
+.speakers-area p {
+  color: #EBECBA;
+  font-size: 15px;
+  line-height: 1.3; 
+  font-family: 'Gotham Medium';
+  margin-bottom: 1em;
+}
+.speakers-area img {
+  width: 100%;
+}
+
+.speakers-area .card-group {
+  background: transparent;
+}
+
+.speakers-area .card {
+  background: transparent;
+}
+
+.speakers-area .card-body {
+  padding-left: 1em;
+}
+.speakers-area .card-title {
+  color: #EC9747;
+}
+
+.speakers-area .card-img-top {
+  padding: 1em;
+}
+
+.speakers-area .card-sm {
+  width: 100vh;
+}
+
+.workshops-area {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.workshops-area h2 {
+  margin-top: 3em; 
+  color: #EC9747;
+  font-size: 25px;
+  font-family: 'Gotham Black';
+  margin-bottom: .8em;
+}
+.workshops-area p {
+  color: #EBECBA;
+  font-size: 15px;
+  line-height: 1.3; 
+  font-family: 'Gotham Medium';
+  margin-bottom: 1em;
+}
+
+.workshops-area img {
+  width: 100%;
+}
+
+.workshops-area .workshop {
+  margin-top: 2em;
+  font-family: 'Gotham Medium';
+}
+
+.workshops-area .workshop-faci {
+  color: #EC9747;
 }
 
 /* .hero-area  */
